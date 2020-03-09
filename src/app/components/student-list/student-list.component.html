@@ -1,0 +1,18 @@
+<h1 class="h2 text-center">Student List</h1>
+<table class="table table-hover">
+    <thead>
+        <th>FullName</th>
+        <th>Department</th>
+        <th>Country</th>
+        <th>Contact</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of listOfStudents">
+            <td (click)="onEdit(student)">{{ student.fullName }}</td>
+            <td (click)="onEdit(student)">{{ student.department }}</td>
+            <td (click)="onEdit(student)">{{ student.country }}</td>
+            <td (click)="onEdit(student)">{{ student.contact }}</td>
+            <td><a class="btn text-danger" (click)="onDelete(student.id)">X</a></td>
+        </tr>
+    </tbody>
+</table>
